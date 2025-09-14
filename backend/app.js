@@ -28,9 +28,9 @@ app.use(cors(corsOptions));
 app.use(express.json()); // for parsing application/json
 
 //!Routes
-app.use("/", userRouter);
-app.use("/", categoryRouter);
-app.use("/", transactionRouter);
+app.use("/api/v1/users", userRouter);
+app.use("/api/v1/categories", categoryRouter);
+app.use("/api/v1/transactions", transactionRouter);
 
 //!Error handling middleware
 app.use(errorHandler);

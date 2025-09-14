@@ -7,20 +7,20 @@ const isAuthenticated = require("../middlewares/isAuth");
 const categoryRouter = express.Router();
 
 //! add
-categoryRouter.post('/api/v1/categories/create', isAuthenticated, categoryController.create);
+categoryRouter.post('/create', isAuthenticated, categoryController.create);
 
 //! lists
-categoryRouter.get('/api/v1/categories/lists',
+categoryRouter.get('/lists',
     isAuthenticated,
     categoryController.lists);
 
 //! update
-categoryRouter.put('/api/v1/categories/update/:id',
+categoryRouter.put('/update/:id',
     isAuthenticated,
     categoryController.update);
 
 //! delete
-categoryRouter.delete('/api/v1/categories/delete/:id',
+categoryRouter.delete('/delete/:id',
     isAuthenticated,
     categoryController.delete);
 
